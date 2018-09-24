@@ -1,0 +1,66 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="mobile-web-app-capable" content="yes" />
+
+	<link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon">
+	<link rel="icon" href="favicon.ico" type="image/vnd.microsoft.icon">
+	<link rel="apple-touch-icon" href="favicon.ico"/>
+	<link rel="apple-touch-icon-precomposed" href="favicon.ico"/>
+	<script src="//griffith.tech/api/ajax/ajax.js"></script>
+	
+	<title>RESTAURANTS Search </title>
+	<script>
+		function executeSearch(){
+			var genre = document.getElementById('genre').value;
+			var name = document.getElementById('name').value;
+					
+			
+			inject('search-results', 'ajax-search-script.php?genre='+ genre +'&name='+ name);
+		}
+	</script>
+	<style></style>
+</head>
+<body>
+	<h1>RESTAURANTS Search</h1>
+	
+	
+	
+	<form>
+	
+	<p>
+		Name
+	</p>
+	
+	<p>
+	<select>
+	<option value="name">name</option>
+     name
+    Coqueta
+    fog harbor fish house
+     GRAY DANKO
+    tom's cafe
+
+	</select>
+		<input type="text" id="genre" name="genre" placeholder="e.g Name" />
+	</p>
+
+
+	
+
+	<p>
+		<input type="button" onclick="executeSearch()" value="Search" /> <input type="reset" value="Clear" />
+	</p>
+
+	</form>
+	
+	<div id="search-results"></div>
+</body>
+
+</html>

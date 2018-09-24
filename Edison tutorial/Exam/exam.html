@@ -1,0 +1,198 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exam</title>
+
+    <style>
+        /* CSS Section */
+
+        /* Q1 */
+        
+        /* body{
+            padding: 2em;
+            width: 80%;
+            font-family: Arial;
+            background-image: url("sky.png");
+        } */
+
+        /* Q2 */
+        .items{
+            margin: 20px;
+            width: 100%;
+            color: white;
+            background-color: blue;
+        }
+
+        /* Q3 */
+        h1{
+            color:red;
+            font-size: 19px;
+            font-family: sans-serif;
+            border: 1px black;
+        }
+
+        /* Q4 */
+        #active{
+            width: 500px;
+            height: 600px;
+            background-image: url("cat.png");
+            border: 3px black;
+        }
+
+        /* Q5 */
+        p{
+            color: blue;
+            font-size: 1.5em;
+            font-family: Arial;
+            border: 2px black;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- HTML Section -->
+    
+    <!-- HTML Q1 -->
+    <fieldset>
+        <legend>Options</legend>
+        
+        Preferred Day: <br />
+        <input type="radio" name="day" /> Friday <br />
+        <input type="radio" name="day" 
+        /> Saturday <br />
+        <input type="radio" name="day" /> Sunday <br />
+        <br />
+        Email: <input type="email" />
+    </fieldset>
+
+    <br>
+
+    <!-- HTML Q2 -->
+    <fieldset>
+        Email: <input type="text" name="email"> <br>
+        Shopping: <br>
+        <input type='radio' name="shopping" value="standard">Standard
+        <input type="radio" name="shopping" value="Express">Express <br>
+        <input type="submit">
+    </fieldset>
+
+    <br>
+
+    <!-- HTML Q3 -->
+    <fieldset>
+        <legend>Personal Information</legend>
+        First Name: <input type="text" name="firstname"> <br>
+        Last Name: <input type="text" name="lastname"> <br>
+        Email : <input type="email" name="email"> <br>
+        Gender: <br>
+        <input type="radio" name="gender"> Male
+        <input type="radio" name="gender"> FeMale <br>
+
+        <input type="submit">
+        <button>Cancel</button>
+    </fieldset>
+
+    <br>
+
+    <!-- HTML Q4 -->
+    <fieldset>
+        <legend>Order</legend>
+        iPhone XS Max 256GB Gold: <br>
+        collect way: <br>
+        <input type="radio" name="collect">Delivery
+        <input type="radio" name="collect"> pick-up <br>
+        First Name: <input type="text" name="firstname"> <br>
+        Last Name: <input type="text" name="lastname"> <br>
+        Email: <input type="email" name="email"> <br>
+        Shipping Address: <input type="text" name="address"> <br>
+        Mobile Phone: <input type="text" name="phone"> <br>
+        <input type="submit">
+    </fieldset>
+
+    <fieldset>
+        <legend>Register</legend>
+        FirstName:<input type="text"> <br>
+        LastName:<input type="text"> <br>
+        UserName:<input type="text"> <br>
+        Email: <input type="email"> <br>
+        Password: <input type="password"> <br>
+        Gender: <input type="radio"> Male <input type="radio"> Female <br>
+        <input type="checkbox"> I agree the cons and condition <br>
+        <input type="submit">
+        <input type="reset">
+    </fieldset>
+
+    <fieldset>
+        <legend>Login</legend>
+        UserName:<input type="text"> <br>
+        Password: <input type="password"> <br>
+        <input type="checkbox"> I am human <br>
+        <input type="submit">
+        <input type="reset">
+    </fieldset>
+
+    <fieldset>
+        <legend>Contact US</legend>
+        Name:<input type="text"> <br>
+        Email: <input type="email"> <br>
+        Role: <br>
+        <input type="radio"> Guest 
+        <input type="radio"> Customer
+        <input type="radio"> Stakeholder <br>
+        Question: <input type="text"> <br>
+        <input type="checkbox"> I confirm to send it to abc company <br>
+        <input type="submit">
+    </fieldset>
+
+    
+    <br> <!-- Push element to next line -->
+
+    <!-- JavaScript Tester -->
+    
+    <!-- Q1 -->
+    <input type="text" id="myfield" onclick="highlight()"/> 
+
+    <br> <!-- Push element to next line -->
+
+    <!-- Q2 -->
+    <input type="text" id="textField" onclick="input_Clicked()"/>
+
+    <br> <!-- Push element to next line -->
+
+    <!-- Q3 -->
+    <input type="text" id="inputField" onclick="isClicked()"/>
+
+    <br> <!-- Push element to next line -->
+
+    <!-- Q4 -->
+    <p id="message"> Hello World!!!</p>
+    <button onclick="makeRed()">Click Me</button>
+
+<script>
+    // JavaScript Section
+
+    // Q1
+    function highlight(){
+        document.getElementById('myfield').style.backgroundColor = 'yellow';
+    }
+
+    // Q2
+    function input_Clicked(){
+        document.getElementById('textField').style.color = "blue";
+    }
+
+    // Q3
+    function isClicked(){
+        document.getElementById('inputField').style.color = "blue";
+    }
+
+    // Q4 
+    function makeRed(){
+        console.log("Hello")
+        document.getElementById('message').style.color = 'red';
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        /* ID selector */
+        #question3{
+            color: blue;   
+        }
+        /* Class selector */
+        .title{
+            color: purple;
+        }
+        /* HTML Tag Selector */
+        p{
+            font-size: 16px;
+        }
+
+    </style>
+    <!-- <link rel="stylesheet" href="./style.css" type="text/css"> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+<body>
+
+    <button type="button" class="btn btn-primary">Primary</button>
+
+    <h1 class="title">Insert the value to check this user is online or not:</h3>
+    <input type="text" id="player"/>
+    <button onclick="checkIfOnline()">Check</button>
+
+    <!-- Part C Question 1 Describe what a server side and client side language is. Provide one example of each. -->
+    <h1 class="title">Server side Language :</h1>
+    <p>PHP - It is used to collect to the server and send the html message to the server</p>
+    <p>MySQL - Server side language to control database </p>
+
+    <h1 class="title">Client side Language : </h1>
+    <p>HTML - Client Side Language, the basic structure of the website</p>
+    <p>CSS - responsible to control the website layout and style </p>
+    <p>JavaScript - Client side for calculation, manipulation</p>
+
+    <!-- Question 2  What is the function of a Web Server and an FTP Server ?-->
+    <p>Web Server - people can get the website data - HTML/CSS/Javascript from Web server to show the website on browser</p>
+    <p>FTP Server - people can download file on a FTP server</p>
+
+    <!-- Question 3 Describe two(2) waysin which you can specify CSS style information for a document. -->
+    <h1 class="title">There are three ways to specify CSS style</h1>
+    <p>Class Selector - .className</p>
+    <p id="question3">ID Selector - #ID_Name</p>
+    <p>Tag Selector - h1{}, p{}, body{}</p>
+
+    <!-- Question 4 Describe two(2) ways to optimise how your site is indexed by a search engine. -->
+    <h3>Create page titles. Keyword-based titles help establish page theme and direction for your keywords.</h3>
+    <h3>Create meta tags.</h3>
+    
+
+    <script>
+        // JavaScript Section
+        function checkIfOnline(){
+
+            var name = document.getElementById("player").value;
+            for(var i = 0; i < playersOnline.length; i++ ){
+                if (playersOnline[i] == name){
+                    console.log("The player is online");
+                    return
+                }
+            }
+            console.log("The player is offline");
+            return
+            
+        }
+
+        var playersOnline = new Array();
+            playersOnline.push("Rob ");
+            playersOnline.push("Ali");
+            playersOnline.push("Sue");
+            playersOnline.push("Shaz");
+            playersOnline.push("Matt");
+            playersOnline.push("Aaron");
+    </script>
+
+</body>
+</html>
