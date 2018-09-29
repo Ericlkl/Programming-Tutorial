@@ -6,56 +6,32 @@
     <title>Document</title>
 
     <style>
-        /* CSS Section */
-        h1{
-                color:blue; 
-        }
-
-        body{
-            background-color: black;
-        }
-
-        .head2{
-           color:white;        
-        }
-
-        #special_head{
-            color:red;
-        }
-
-        .items{
-            background-color: white;
-        }
-
-        #title{
-            color:white;
-        }
     </style>
-
-    <script>
-        console.log("runs when the html turn on")
-
-        function onClicked(){
-            console.log("hello")
-            console.log("World")
-            console.log("This is Eric")
-        }
-    </script>
 </head>
 <body>
     <!-- HTML Section -->
-    <h1>title 1</h1>
-    <h1 class="head2">title 2</h1>
-
-    <h2 class="head2">Hello World!!!</h2>
-
-    <h3 id="special_head" class="head2"> 
-        ID Name: special_head 
-    </h3>
-
-    <h4 class='items'> Heading four</h4>
-
-    <h5 id="title">Heading Five</h5>
+    <fieldset>
+        <legend>Flight</legend>
+        From: <input type="text" name="from">
+        To : <input type="text" name="to"> <br>
+        Pay Method: <br>
+        <input type="radio" name="pay_method" value="money"> Use money, points or both
+        <input type="radio" name="pay_method" value="points"> Use points - Classic Flight Rewards only
+        <br>
+        Direction: <br>
+        <input type="radio" name="direction" value="one_way"> one way
+        <input type="radio" name="direction" value="return"> Return
+        <br>
+        Membership no: <input type="text" name="membership_No">
+        <br>
+        Last Name: <input type="text" name="lastName">
+        <br>
+        Password: <input type="password" name="password">
+        <br>
+        <input type="checkbox"> Remember Details
+        <br>
+        <input type="submit">
+    </fieldset>
 
 </body>
 </html>
