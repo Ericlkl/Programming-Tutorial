@@ -10,7 +10,8 @@ console.log("Welcome to the first Class !!!");  // 用於打印在電腦視𥦬�
 var z = 100;
 z = z + 1;
 
-for(var a = 0; a < 100 ; a++){
+for (var a = 0; a < 100 ; a++)
+{
     z++;
 }
 
