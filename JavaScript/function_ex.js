@@ -1,16 +1,35 @@
 // Create a function called hello that print your name on the console
-
+function hello(){
+    console.log("Edison");
+}
 // Create a function called Add has two input number1 and number2 
 // Return -> the add total from this two number
+function add (number1, number2)
+{
+    return number1 + number2;
+}
 
 // Create a function called sub has two input n1 and n2 
 // Return -> the sub total from this two number
+function sub (number1, number2){
+    return number1 - number2;
+}
+
 
 // Create a function called times has two input x and y 
 // Return -> the times total from this two number
+function times (x,y){
+    return x * y;
+}
 
 // Create a function called divid has two input a and b 
 // Return -> the divid total from this two number
+function divid(a,b){
+    return a /b;
+}
+
+var result = times(3,4);
+console.log(result);
 
 // Create a function called RunThisProgram 
 

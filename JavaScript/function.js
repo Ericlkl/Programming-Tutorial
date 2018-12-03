@@ -13,7 +13,7 @@ function sayHelloTo(name){
     console.log("I can Read the name from your input :D Do You see that?");
 }
 
-function calculateTheDaysIamInTheWorld(yearsOld){
+function calculateTheDaysIamInTheWorld ( yearsOld ){
     var days = 365;
     var daysYouLive = days * yearsOld;
     return daysYouLive;
@@ -26,5 +26,3 @@ function RunThisProgram(){
     var myDays = calculateTheDaysIamInTheWorld(25);
     console.log("I have been living in the earth at lease " + myDays + "days ");
 }
-
-RunThisProgram();
