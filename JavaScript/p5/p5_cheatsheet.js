@@ -73,4 +73,15 @@ function draw() {
     // 打印圖片
     // 使用方法 image(圖片的變量名字 , X開始點, Y開始點);
     image(img,0,0);
+    console.log(mouseX);  // mouseX 是讀取鼠標的X位置
+    console.log(mouseY);  // mouseY  是讀取鼠標的Y位置
+    
+    // 自己定義的X 跟Y 位置
+    var x = 100;
+    var y = 100;
+    // 這個意思是說 鼠標到約某位置的事候幹點什麼
+    if(mouseX > x -10 && mouseX < 10 + x && mouseY > y - 10 && mouseY < y +10)
+    {
+      //幹點什麼事
+    }
 }
