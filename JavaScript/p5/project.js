@@ -5,8 +5,8 @@ var shopsImages = [];
 var shopsCoordinates = [ [865,310] , [1453,893] , [772, 559] ,[930,663] , [1378,970] ];
 
 // User Location Variablex
-var userX = 100; // user coordinate X Value
-var userY = 100; // user coordinate Y Value
+var userX = 540; // user coordinate X Value
+var userY = 355; // user coordinate Y Value
 var loc_indicator_size = 20; // the location indicator size
 
 
@@ -38,30 +38,25 @@ function fontSetUp()
   textAlign(CENTER,CENTER);
 }
 
-
 /*	-----------------------------------------------------------------------
-		---------------------Draw Function---------------------------
+		---------------------User Interaction Function---------------------------
     ----------------------------------------------------------------------- */
-function drawMap()
-{
-  // Draw the map image 
-  image(mapImg, 0,0);
-}
 
 function ShopImagePopsUp()
 {
   for(var i = 0; i < 5 ; i++){
     var shopX = shopsCoordinates[i][0];
     var shopY = shopsCoordinates[i][1];
+    
     if(mouseX > shopX-10 && mouseX < 10+shopX && mouseY > shopY-10 && mouseY < shopY+10)
     {
       image(shopsImages[i],shopX,shopY);
-      drawText( "TelPhone : 0416123421" ,shopX-30, shopY - 30 );
+      drawText( "TelPhone : 0416123421" , shopX-30, shopY - 30 );
     }
   }
 }
 
-function keyPressed() {
+function DetectKeyPressed() {
   UserMovement();
   key ="";
 }
@@ -86,6 +81,15 @@ function UserMovement()
   }
 }
 
+/*	-----------------------------------------------------------------------
+		---------------------Draw Function---------------------------
+    ----------------------------------------------------------------------- */
+function drawMap()
+{
+  // Draw the map image 
+  image(mapImg, 0,0);
+}
+
 function drawText(msg, x, y){
   fill(0);
   text(msg,x,y);
@@ -99,6 +103,7 @@ function drawUIComponent()
 }
 
 function drawUserLocation(){
+  
   // Draw a circle
   stroke(50);
   fill(255);
@@ -117,7 +122,7 @@ function setup() {
 
 function draw() {
   drawUIComponent();
-  keyPressed();
+  DetectKeyPressed();
   drawUserLocation();
   ShopImagePopsUp();
 }
