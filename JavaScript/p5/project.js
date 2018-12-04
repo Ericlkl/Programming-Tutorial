@@ -61,6 +61,31 @@ function ShopImagePopsUp()
   }
 }
 
+function keyPressed() {
+  UserMovement();
+  key ="";
+}
+
+function UserMovement()
+{
+  if (key == "d") // Going right
+  {
+    userX += 5;
+  }
+  else if (key == "a") // Going left
+  {
+    userX -= 5;
+  }
+  else if (key == "w") // Going Up
+  {
+    userY -= 5;
+  } 
+  else if (key == "s") // Going down
+  {
+    userY += 5;
+  }
+}
+
 function drawText(msg, x, y){
   fill(0);
   text(msg,x,y);
@@ -92,6 +117,7 @@ function setup() {
 
 function draw() {
   drawUIComponent();
+  keyPressed();
   drawUserLocation();
   ShopImagePopsUp();
 }
