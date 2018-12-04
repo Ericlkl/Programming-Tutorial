@@ -4,8 +4,14 @@ var shopsImages = [];
 // 2D Array for storing coordinate of the shop on the map
 var shopsCoordinates = [ [865,310] , [1453,893] , [772, 559] ,[930,663] , [1378,970] ];
 
-/*  -----------------------------------------------------------------------
-    ---------------------SET UP Function---------------------------
+// User Location Variablex
+var userX = 100; // user coordinate X Value
+var userY = 100; // user coordinate Y Value
+var loc_indicator_size = 20; // the location indicator size
+
+
+/*	-----------------------------------------------------------------------
+		---------------------SET UP Function---------------------------
     ----------------------------------------------------------------------- */
 function GetImageFromImagesFolder(){
   
@@ -33,8 +39,8 @@ function fontSetUp()
 }
 
 
-/*  -----------------------------------------------------------------------
-    ---------------------Draw Function---------------------------
+/*	-----------------------------------------------------------------------
+		---------------------Draw Function---------------------------
     ----------------------------------------------------------------------- */
 function drawMap()
 {
@@ -63,12 +69,20 @@ function drawText(msg, x, y){
 function drawUIComponent()
 {
   background(220);
-  drawText("WelCome To Westfield GardenCity Online Map",0, 50 );
   drawMap();
+  drawText("WelCome To Westfield GardenCity Online Map",250, 150 );
 }
 
-/*  -----------------------------------------------------------------------
-    ---------------------Excute Program Function---------------------------
+function drawUserLocation(){
+  // Draw a circle
+  stroke(50);
+  fill(255);
+  ellipse(userX, userY, loc_indicator_size, loc_indicator_size);
+  drawText("You are here!", userX + loc_indicator_size , userY + loc_indicator_size );
+}
+
+/*	-----------------------------------------------------------------------
+		---------------------Excute Program Function---------------------------
     ----------------------------------------------------------------------- */
 function setup() {
   createCanvas(2500, 1500);
@@ -78,5 +92,6 @@ function setup() {
 
 function draw() {
   drawUIComponent();
+  drawUserLocation();
   ShopImagePopsUp();
 }
