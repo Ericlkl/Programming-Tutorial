@@ -24,11 +24,19 @@ function GetImageFromImagesFolder(){
   }
 }
 
+function fontSetUp()
+{
+  var font = loadFont('fonts/Roboto-Regular.ttf');
+  textFont(font);
+  textSize(20);
+  textAlign(CENTER,CENTER);
+}
+
 
 /*  -----------------------------------------------------------------------
     ---------------------Draw Function---------------------------
     ----------------------------------------------------------------------- */
-function drawImage()
+function drawMap()
 {
   // Draw the map image 
   image(mapImg, 0,0);
@@ -42,8 +50,21 @@ function ShopImagePopsUp()
     if(mouseX > shopX-10 && mouseX < 10+shopX && mouseY > shopY-10 && mouseY < shopY+10)
     {
       image(shopsImages[i],shopX,shopY);
+      drawText( "TelPhone : 0416123421" ,shopX-30, shopY - 30 );
     }
   }
+}
+
+function drawText(msg, x, y){
+  fill(0);
+  text(msg,x,y);
+}
+
+function drawUIComponent()
+{
+  background(220);
+  drawText("WelCome To Westfield GardenCity Online Map",0, 50 );
+  drawMap();
 }
 
 /*  -----------------------------------------------------------------------
@@ -51,16 +72,11 @@ function ShopImagePopsUp()
     ----------------------------------------------------------------------- */
 function setup() {
   createCanvas(2500, 1500);
+  fontSetUp();
   GetImageFromImagesFolder();
 }
 
 function draw() {
-  background(220);
-  
-  if (mouseIsPressed){
-    console.log("Mouse X = " + mouseX);
-    console.log("Mouse Y = " + mouseY);
-  }
-  drawImage();
+  drawUIComponent();
   ShopImagePopsUp();
 }
