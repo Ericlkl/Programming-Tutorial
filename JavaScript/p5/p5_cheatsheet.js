@@ -47,23 +47,21 @@ function setup() {
 
 // How to use keybroad key
 function keyPressed() {
-  var keyIndex = -1;
-  if (key >= 'a' && key <= 'z') {
+  // Key 是一個string字串Variable 去判你按了什麼Key
+  if (key >= 'a' && key <= 'z') { //當你按了a-z的字母Key時
     keyIndex = key.charCodeAt(0) - 'a'.charCodeAt(0);
   }
-  if (keyIndex == -1) {
-    // If it's not a letter key, clear the screen
-    background(230);
-  } else { 
-    // It's a letter key, fill a rectangle
-    randFill_r = Math.floor(Math.random() * 255 + 1);
-    randFill_g = Math.floor(Math.random() * 255 + 1);
-    randFill_b = Math.floor(Math.random() * 255 + 1);
-    fill(randFill_r,randFill_g,randFill_b);
-    var x = map(keyIndex, 0, 25, 0, width - rectWidth);
-    rect(x, 0, rectWidth, height);
-  }
 }
+
+function drawCircle(){
+  //一個打印圓圈的功能
+
+  stroke(50);  
+  fill(255); //圓圈的顏色
+  ellipse(0, 0, 20, 20); //打印圓圈在 X Y 位置
+  // 使用方法 ellipse(X開始點,Y開始點,大小，大小)
+}
+
 
 // 把所有有關於 畫東西的Function放在這
 function draw() {
