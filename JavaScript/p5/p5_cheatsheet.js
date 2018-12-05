@@ -55,11 +55,18 @@ function keyPressed() {
 
 function drawCircle(){
   //一個打印圓圈的功能
-
   stroke(50);  
   fill(255); //圓圈的顏色
   ellipse(0, 0, 20, 20); //打印圓圈在 X Y 位置
   // 使用方法 ellipse(X開始點,Y開始點,大小，大小)
+}
+
+// 一個感應鼠標按下去之後要幹什麼的功能
+function mousePressed() {
+  // 當滑鼠按Canvas的時候始動
+  if (mouseIsPressed){
+    console.log(mouseX);
+    console.log(mouseY);
 }
 
 
