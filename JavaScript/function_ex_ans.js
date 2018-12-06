@@ -27,8 +27,11 @@ function times(x,y)
 // Return -> the divid total from this two number
 
 function divid(a,b){
+    var z = 10;
     return a/b;
 }
+
+
 
 // Create a function called RunThisProgram 
 function RunThisProgram(){
