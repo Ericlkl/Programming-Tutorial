@@ -1,4 +1,4 @@
-# Edison Tutorial
+# Programming-Tutorial 
 This repo stored lots of the website material for teaching student how to make a website.
 It includes HTML/CSS/Javascript material for people who learn web design at the first time.
 
